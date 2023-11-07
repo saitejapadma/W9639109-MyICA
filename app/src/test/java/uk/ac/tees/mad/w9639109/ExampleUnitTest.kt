@@ -1,4 +1,4 @@
-package com.example.switchcaseapp
+package uk.ac.tees.mad.w9639109
 
 import org.junit.Test
 

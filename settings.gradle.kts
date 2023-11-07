@@ -12,5 +12,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "SwitchCaseApp"
-include ':app'
+
+rootProject.name = "SmoothDrive"
+include(":app")
