@@ -48,4 +48,7 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("com.google.firebase:firebase-analytics")
     implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
+    implementation("com.squareup.okhttp3:okhttp:4.9.0")
+    implementation("com.google.code.gson:gson:2.8.6")
+
 }

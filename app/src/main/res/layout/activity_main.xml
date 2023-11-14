@@ -6,13 +6,146 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dashboard"
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:columnOrderPreserved="false"
+        android:rowCount="4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnAddCar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Car"
+            android:layout_columnSpan="2"
+            android:layout_margin="16dp"
+            app:layout_constraintWidth_percent="1.0"/>
+
+        <!-- Grid 1: Breakdown Assistance -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Breakdown Assistance" />
+
+        </RelativeLayout>
+
+        <!-- Grid 2: Nearby Service Stations -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Nearby Service Stations" />
+
+        </RelativeLayout>
+
+        <!-- Grid 3: Vehicle Servicing -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Vehicle Servicing" />
+
+        </RelativeLayout>
+
+        <!-- Grid 4: Expert Chat -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Expert Chat" />
+
+        </RelativeLayout>
+
+        <!-- Grid 5: My Cars screen -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/image"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="My Cars screen" />
+
+        </RelativeLayout>
+
+        <!-- Sign Out Button -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal|bottom"
+            android:layout_margin="16dp"
+            android:text="Sign Out" />
+    </GridLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
