@@ -52,7 +52,7 @@
                 android:id="@+id/carBrandAutoCompleteTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Car Brand"
+                android:hint="Brand"
                 android:inputType="none" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -68,14 +68,14 @@
                 android:id="@+id/carModelAutoCompleteTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Car Model"
+                android:hint="Model"
                 android:inputType="none" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Add Car Button -->
         <Button
             android:id="@+id/addCarButton"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="24dp"

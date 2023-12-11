@@ -29,111 +29,146 @@
 
         <!-- Grid 1: Breakdown Assistance -->
         <RelativeLayout
+            android:id="@+id/breaksdown"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1">
 
             <ImageView
+                android:id="@+id/image_breakdown_assistance"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="200dp"
+                android:layout_above="@id/title_breakdown_assistance"
                 android:layout_margin="8dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/image" />
+                app:srcCompat="@drawable/lady" />
 
             <TextView
+                android:id="@+id/title_breakdown_assistance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
                 android:text="Breakdown Assistance" />
 
         </RelativeLayout>
-
-        <!-- Grid 2: Nearby Service Stations -->
         <RelativeLayout
+            android:id="@+id/near"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1">
 
             <ImageView
+                android:id="@+id/image_nearby_service_stations"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="8dp"
+                android:layout_height="200dp"
+                android:layout_above="@id/title_nearby_service_stations"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/image" />
+                app:srcCompat="@drawable/one" />
 
             <TextView
+                android:id="@+id/title_nearby_service_stations"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
                 android:text="Nearby Service Stations" />
 
         </RelativeLayout>
 
         <!-- Grid 3: Vehicle Servicing -->
         <RelativeLayout
+            android:id="@+id/serviceVechile"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1">
 
             <ImageView
+                android:id="@+id/image_vehicle_servicing"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="8dp"
+                android:layout_height="200dp"
+                android:layout_above="@id/title_vehicle_servicing"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/image" />
+                app:srcCompat="@drawable/serv" />
 
             <TextView
+                android:id="@+id/title_vehicle_servicing"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
                 android:text="Vehicle Servicing" />
 
         </RelativeLayout>
 
         <!-- Grid 4: Expert Chat -->
         <RelativeLayout
+            android:id="@+id/ask"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1">
 
             <ImageView
+                android:id="@+id/image_expert_chat"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="8dp"
+                android:layout_height="200dp"
+                android:layout_above="@id/title_expert_chat"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/image" />
+                app:srcCompat="@drawable/un" />
 
             <TextView
+                android:id="@+id/title_expert_chat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="Expert Chat" />
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="Community Chat" />
 
         </RelativeLayout>
 
         <!-- Grid 5: My Cars screen -->
         <RelativeLayout
+            android:id="@+id/mycars"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1">
 
             <ImageView
+                android:id="@+id/image_my_cars"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="8dp"
+                android:layout_height="200dp"
+                android:layout_above="@id/title_my_cars"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/image"/>
+                app:srcCompat="@drawable/tt" />
 
             <TextView
+                android:id="@+id/title_my_cars"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="My Cars screen" />
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="My Cars" />
 
         </RelativeLayout>
 

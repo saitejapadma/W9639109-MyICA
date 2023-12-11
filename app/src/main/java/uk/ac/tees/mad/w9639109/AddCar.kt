@@ -1,25 +1,54 @@
 package uk.ac.tees.mad.w9639109
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.io.IOException
+import com.google.firebase.database.FirebaseDatabase
 
 class AddCar : AppCompatActivity() {
 
     private lateinit var carMakesAutoCompleteTextView: AutoCompleteTextView
     private lateinit var carModelsAutoCompleteTextView: AutoCompleteTextView
+    private lateinit var carnumber: EditText
+
+
+    private lateinit var database: FirebaseDatabase
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_car)
 
+        carnumber = findViewById(R.id.carNumberEditText)
+        auth = FirebaseAuth.getInstance()
+        database = FirebaseDatabase.getInstance()
 
+        findViewById<Button>(R.id.addCarButton).setOnClickListener{
+            val uid = auth.currentUser?.uid
+            if (uid != null) {
+                val userCarRef = database.getReference("users").child(uid).child("cars")
+                val car = Car(carnumber.text.toString(), carMakesAutoCompleteTextView.text.toString(), carModelsAutoCompleteTextView.text.toString())
+                userCarRef.push().setValue(car).addOnSuccessListener {
+
+                    runOnUiThread {
+                        Toast.makeText(this, "Car added successfully", Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(applicationContext,MainActivity::class.java))
+                        finish()
+                    }
+                }
+            }
+        }
         carMakesAutoCompleteTextView = findViewById(R.id.carBrandAutoCompleteTextView)
         carModelsAutoCompleteTextView = findViewById(R.id.carModelAutoCompleteTextView)
 
